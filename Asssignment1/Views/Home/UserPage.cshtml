@@ -1,0 +1,38 @@
+﻿@*
+    //Adding models here
+*@
+
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "UserPage";
+}
+<body>
+    <!--Jumbotron-->
+    <div class="jumbotrons">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="center-block">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h2>User Page</h2>
+                        <h3>Details for the user goes here.</h3>
+                        <h3>Note: The database functionality is added under the InsertPage and clicking on <b>Database</b> button.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="jumbotron">
+            <div class="card" style="width: 940px;">
+                <nav class="navbar navbar-dark bg-dark">
+                    <h2 class="bg-info">Profile</h2>
+                </nav>
+                <div class="card-body">
+                    <h1 class="card-title">@ViewBag.userName</h1>
+                    <p class="card-text">Welcome chef, this is your profile. Editing would be added soon.</p>
+                    <a href="#" class="btn btn-primary">Edit</a>    
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Jombotron end-->
+</body>

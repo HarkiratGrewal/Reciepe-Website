@@ -1,0 +1,81 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    Layout = null;
+}
+
+<!Doctype html>
+<html>
+<div class="alignment">
+    <head>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.min.css" />
+        <link rel="stylesheet" href="~/css/custom.css" />
+        <link rel="stylesheet" href="~/lib/bootstrap-4.0.0/bootstrap-4.0.0/dist/css/bootstrap.min.css" />
+        <script src="~/lib/bootstrap-4.0.0/bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
+
+        <!--Navbar-->
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                <a class="nav-link active" asp-controller="Home" asp-action="LoginPage">Login</a>
+            </li>
+            <li>
+                <a class="nav-link" asp-controller="Home" asp-action="Home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Logging In...</a>
+            </li>
+        </ul>
+        <!--Navbar Ending-->
+
+    </head>
+    <body>
+        <!--Jumbotron-->
+        <div class="jumbotrons">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="center-block">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h2>Login to your Portal</h2>
+                            <h3>Welcome @ViewBag.Username</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="jumbotron">
+                <form>
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Email address</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Check me out</label>
+                    </div>
+                    <a asp-controller="Home" asp-action="UserPage"><button type="button" class="btn btn-primary">Submit</button></a>
+                </form>
+            </div>
+        </div>
+        <!--Jombotron end-->
+        <!-- Footer -->
+        <footer class="page-footer font-small blue">
+
+            <!-- Copyright -->
+            <div class="footer-copyright text-center py-3">
+                © 2018 Copyright:
+                <a href="https://portfolioharkiratgrewal.herokuapp.com/"> Harkirat Singh Grewal</a>
+            </div>
+            <!-- Copyright -->
+
+        </footer>
+        <!-- Footer -->
+    </body>
+</div>
+</html>

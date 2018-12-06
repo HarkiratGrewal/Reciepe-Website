@@ -1,0 +1,53 @@
+﻿@model IEnumerable<Asssignment1.Models.ReciepeModel>
+
+@{
+    Layout = "_LayoutCRUD";
+    ViewData["Title"] = "Index";
+}
+<body>
+    <div class="jumbotrons">
+        <h2>Index</h2>
+
+        <p>
+            <a asp-action="Create"><button class="btn-primary">Create New</button></a>
+            <a asp-action="Details"><button class="btn-primary">Details</button></a>
+        </p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.reciepeName)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.reciepeIngredients)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.reciepeProcedure)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.reciepeName)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.reciepeIngredients)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.reciepeProcedure)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>

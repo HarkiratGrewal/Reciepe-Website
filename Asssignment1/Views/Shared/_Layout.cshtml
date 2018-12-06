@@ -1,0 +1,86 @@
+﻿<!Doctype html>
+<html>
+<div class="alignment">
+    <head>
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/site.min.css" />
+        <link rel="stylesheet" href="~/css/custom.css" />
+        <link rel="stylesheet" href="~/lib/bootstrap-4.0.0/bootstrap-4.0.0/dist/css/bootstrap.min.css" />
+        <script src="~/lib/bootstrap-4.0.0/bootstrap-4.0.0/dist/js/bootstrap.min.js"></script>
+
+        <!--Navbar-->
+        <ul class="nav nav-tabs">
+            <li class="nav-item">
+                @{
+                    if (ViewBag.Title == "UserPage")
+                    {
+                        <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="UserPage">Profile</a>
+                    }
+                    else
+                    {
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="UserPage">Profile</a>
+                    }
+                }
+            </li>
+            <li class="nav-item">
+                @{
+                    if (ViewBag.Title == "DisplayPage")
+                    {
+                        <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="DisplayPage">My Content</a>
+                    }
+                    else
+                    {
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="DisplayPage">My Content</a>
+                    }
+                }
+            </li>
+            <li class="nav-item">
+                @{
+                    if (ViewBag.Title == "InsertPage")
+                    {
+                        <a class="nav-link active" asp-controller="Home" asp-action="InsertPage">Insert Page</a>
+                    }
+                    else
+                    {
+                        <a class="nav-link" asp-controller="Home" asp-action="InsertPage">Insert Page</a>
+                    }
+                }
+            </li>
+            <li class="nav-item">
+                @{
+                    if (ViewBag.Title == "DataPage")
+                    {
+                        <a class="nav-link active" asp-area="" asp-controller="Home" asp-action="DataPage">Data</a>
+                    }
+                    else
+                    {
+                        <a class="nav-link" asp-area="" asp-controller="Home" asp-action="DataPage">Data</a>
+                    }
+                }
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" asp-controller="Home" asp-action="Home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Logged In...</a>
+            </li>
+        </ul>
+        <!--Navbar Ending-->
+    </head>
+
+    @RenderBody()
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">
+            © 2018 Copyright:
+            <a href="https://portfolioharkiratgrewal.herokuapp.com/"> Harkirat Singh Grewal</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+</div>
+</html>

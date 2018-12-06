@@ -1,0 +1,42 @@
+﻿body {
+    background-image: url("../images/image1.jpg");
+    background-size: cover;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    position: sticky;
+}
+
+.jumbotron {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+li.right {
+    position: absolute;
+
+    /*right: 20px;*/
+}
+
+.alignment {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 980px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#footer{
+    position: fixed;
+    align-content: center;
+    text-decoration-color: white;
+}

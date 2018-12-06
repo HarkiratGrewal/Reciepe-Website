@@ -1,0 +1,93 @@
+﻿@model List<Asssignment1.Models.ReciepeModel>
+
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "DataPage";
+}
+
+@{
+    var reciepe = ViewData["reciepe"] as Asssignment1.Models.ReciepeList;
+}
+
+<body>
+    <!--Jumbotron-->
+    <div class="jumbotrons">
+
+        <div class="jumbotrons">
+            <div class="jumbotron jumbotron-fluid">
+                <div class="center-block">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h2>Data Page</h2>
+                            <h3>List of Reciepes.</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--saagPaneer-->
+            <div class="jumbotron jumbotron-fluid">
+
+                <!--Constant array values-->
+                <!--Just here for future reference-->
+                @*<div class="center-block">
+                        <div class="card text-center">
+
+                            @for (int i = 0; i < reciepe.reciepeList.Length; i++)
+                            {
+
+                                <div class="card-body">
+                                    <reciepes>
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item-action">
+                                                @if (i % 2 == 0)
+                                                {
+                                                    <h2 class="active">
+                                                        @reciepe.reciepeList[i]
+                                                    </h2>
+                                                }
+                                                @if (i % 2 != 0)
+                                                {
+                                                    <h2 class="alert-dark">
+                                                        @reciepe.reciepeList[i]
+                                                    </h2>
+                                                }
+                                            </li>
+                                        </ul>
+                                    </reciepes>
+                                </div>
+                            }
+                        </div>
+                    </div>*@
+
+                <!--Jombotron end-->
+                <!--To be included after the display page is made-->
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Reciepe Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @{
+                            int i = 1;
+                            foreach (var a in Model)
+                            {
+                                <tr>
+                                    <td>Reciepe #@i</td>
+                                    <th scope="row">@a.reciepeName</th>
+
+                                    <!--Displaying only name in data page-->
+                                    @*<td>@a.reciepeIngredients</td>
+                                        <td>@a.reciepeProcedure</td>*@
+                                </tr>
+                                i++;
+                            }
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+</body>

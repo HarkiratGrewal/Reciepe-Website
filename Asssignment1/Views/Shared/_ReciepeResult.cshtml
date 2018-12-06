@@ -1,0 +1,17 @@
+﻿@model Asssignment1.Models.ReciepeModel
+@{
+    Layout = null;
+}
+
+<form asp-controller="Home" asp-action="_ReciepeResult" method="post" class="form-group">
+    <input asp-for="reciepeName" class="form-control form-control-lg" type="text" placeholder="Heading goes here">
+    <br />
+    <label asp-for="reciepeIngredients">Ingredients</label>
+    <textarea asp-for="reciepeIngredients" class="form-control" rows="5" id="ingredients"></textarea>
+    <br />
+    <label asp-for="reciepeProcedure">Description</label>
+    <textarea asp-for="reciepeProcedure" class="form-control" rows="5" id="description"></textarea>
+    <br />
+    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="reset" class="btn btn-primary">Cencel</button>
+</form>

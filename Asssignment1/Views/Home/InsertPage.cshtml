@@ -1,0 +1,37 @@
+﻿@model Asssignment1.Models.ReciepeModel
+
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "InsertPage";
+}
+<body>
+    <!--Jumbotron-->
+    <div class="jumbotrons">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="center-block">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <h2>Insert Page</h2>
+                        <h3>Enter your special ingredient reciepe here to store as cache.</h3>
+                        <h3>Click below for <b>Database</b></h3>
+                        <h6>For full marks</h6>
+                        <h6>||</h6>
+                        <h6>V</h6>
+                        <a asp-controller="ReciepeModels" asp-action="Index"><input type ="submit" value="Database" class ="btn btn-primary"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="jumbotron">
+            <div class="card text-center">
+                <div class="card-body">
+                    <!--Partial rendering form-->
+                    @Html.Partial("_ReciepeResult")
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!--Jombotron end-->
+</body>
